@@ -24,5 +24,47 @@ namespace UsersApp
         {
             InitializeComponent();
         }
+
+        private void Button_Reg_Click(object sender, RoutedEventArgs e)
+        {
+            string login = textBoxLogin.Text.Trim(); // .Trim() удаление пробелов
+            string pass = passBox.Password.Trim();
+            string pass_2 = passBox_2.Password.Trim();
+            string email = textBoxEmail.Text.Trim().ToLower(); // нижний регистр
+
+            if (login.Length < 5)
+            {
+                textBoxLogin.ToolTip = "Это поле имеет меньше 5 символов!";
+                textBoxLogin.Background = Brushes.DarkRed;  // цвет поля при ошибке
+            }
+            else if (pass.Length < 6)
+            {
+                passBox.ToolTip = "Пароль должен содержать не менее 6 символов!";
+                passBox.Background = Brushes.DarkRed;
+            }
+            else if (pass_2 != pass)
+            {
+                passBox_2.ToolTip = "Пароль не совпадает!";
+                passBox_2.Background = Brushes.DarkRed;  // цвет поля при ошибке
+            }
+            else if (email.Length < 5 || !email.Contains("@") || !email.Contains("."))
+            {
+                textBoxEmail.ToolTip = "Поле введено не корректно!";
+                textBoxEmail.Background = Brushes.DarkRed;  // цвет поля при ошибке
+            }
+            else // отменяет все предупреждения
+            {
+                textBoxLogin.ToolTip = "";
+                textBoxLogin.Background = Brushes.Transparent;
+                passBox.ToolTip = "";
+                passBox.Background = Brushes.Transparent;
+                passBox_2.ToolTip = "";
+                passBox_2.Background = Brushes.Transparent;
+                textBoxEmail.ToolTip = "";
+                textBoxEmail.Background = Brushes.Transparent;
+
+                MessageBox.Show("Все введено корректно."); // всплывающее окно
+            }
+        }
     }
 }
