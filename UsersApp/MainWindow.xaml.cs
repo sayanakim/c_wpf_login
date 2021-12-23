@@ -27,6 +27,8 @@ namespace UsersApp
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
+            // start - обработчик событий (валидация)
+
             string login = textBoxLogin.Text.Trim(); // .Trim() удаление пробелов
             string pass = passBox.Password.Trim();
             string pass_2 = passBox_2.Password.Trim();
@@ -65,6 +67,8 @@ namespace UsersApp
 
                 MessageBox.Show("Все введено корректно."); // всплывающее окно
             }
+
+            // end - обработчик событий
         }
     }
 }
