@@ -20,19 +20,29 @@ namespace UsersApp
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        AppContext db;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            db = new AppContext(); // ссылка на класс AppContext
+
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
         {
-            // start - обработчик событий (валидация)
+            // 1.start - обработчик событий
+            
+            // получение данных от пользователя
 
             string login = textBoxLogin.Text.Trim(); // .Trim() удаление пробелов
             string pass = passBox.Password.Trim();
             string pass_2 = passBox_2.Password.Trim();
             string email = textBoxEmail.Text.Trim().ToLower(); // нижний регистр
+
+            // проверяем значения на корректность
 
             if (login.Length < 5)
             {
@@ -66,9 +76,30 @@ namespace UsersApp
                 textBoxEmail.Background = Brushes.Transparent;
 
                 MessageBox.Show("Все введено корректно."); // всплывающее окно
-            }
 
-            // end - обработчик событий
+                //1. end 
+
+
+                //2.start - работа с БД
+
+                User user = new User(login, email, pass); // создаем объект на основе модели
+
+                db.Users.Add(user); // добавляет запись в бд
+                db.SaveChanges(); // сохранение в бд
+
+                // 3. Переход на окно авторизации после регистрации
+                AuthWindow authWindow = new AuthWindow();
+                authWindow.Show();
+                this.Hide();
+            }
+        }
+
+        // 3. переключение на окно авторизации из окна регистрации
+        private void Button_Window_Auth_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            this.Hide();
         }
     }
 }

@@ -20,3 +20,16 @@ D:\VS2022\project\UsersApp\UsersApp\obj\Debug\UsersApp.csproj.CoreCompileInputs.
 D:\VS2022\project\UsersApp\UsersApp\obj\Debug\UsersApp.csproj.CopyComplete
 D:\VS2022\project\UsersApp\UsersApp\obj\Debug\UsersApp.exe
 D:\VS2022\project\UsersApp\UsersApp\obj\Debug\UsersApp.pdb
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\reg_login.db
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\EntityFramework.dll
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\System.Data.SQLite.dll
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\System.Data.SQLite.EF6.dll
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\System.Data.SQLite.Linq.dll
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\EntityFramework.xml
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS2022\project\UsersApp\UsersApp\bin\Debug\System.Data.SQLite.xml
+D:\VS2022\project\UsersApp\UsersApp\obj\Debug\AuthWindow.g.cs
+D:\VS2022\project\UsersApp\UsersApp\obj\Debug\AuthWindow.baml
+D:\VS2022\project\UsersApp\UsersApp\obj\Debug\UserPageWindow.g.cs
+D:\VS2022\project\UsersApp\UsersApp\obj\Debug\UserPageWindow.baml
