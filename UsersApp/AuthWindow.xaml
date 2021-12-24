@@ -14,8 +14,8 @@
             <EventTrigger.Actions>
                 <BeginStoryboard>
                     <Storyboard TargetProperty="Width" TargetName="authButton">
-                        <DoubleAnimation From="0" To="450" AutoReverse="True" 
-                                         RepeatBehavior="4x" Duration="0:0:3" />
+                        <DoubleAnimation From="100" To="450" AutoReverse="True"
+                                         RepeatBehavior="2x" Duration="0:0:4" />
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger.Actions>
