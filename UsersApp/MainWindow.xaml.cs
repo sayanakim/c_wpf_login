@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
+
 
 namespace UsersApp
 {
@@ -29,6 +31,13 @@ namespace UsersApp
 
             db = new AppContext(); // ссылка на класс AppContext
 
+            // анимация кнопки "зарегистрироваться"(1 способ)
+
+            DoubleAnimation btnAnimation = new DoubleAnimation();
+            btnAnimation.From = 0; // движение от 0 px
+            btnAnimation.To = 450; // движение до 450px
+            btnAnimation.Duration = TimeSpan.FromSeconds(3); // время движения
+            regButton.BeginAnimation(Button.WidthProperty, btnAnimation);
         }
 
         private void Button_Reg_Click(object sender, RoutedEventArgs e)
